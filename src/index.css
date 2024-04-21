@@ -26,6 +26,7 @@ body {
   padding: 1em; /* Add some spacing around the container */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
   margin-top: 20%;
+  font-size: auto;
 }
 
 @media (max-width: 1008px) {
