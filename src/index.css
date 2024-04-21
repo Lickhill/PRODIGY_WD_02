@@ -1,196 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
 
-body{
-    color: rgb(77, 123, 3);
-    background-color: black;
-    font-family: 'M PLUS Code Latin', sans-serif;
-    font-size: 3vw;
+body {
+  color: rgb(77, 123, 3);
+  background-color: black;
+  font-family: "M PLUS Code Latin", sans-serif;
+  font-size: 3vw;
 }
 
-
-
 .todolist-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Prevent scrolling within the container */
-    max-height: calc(100vh - 2em); /* Adjust based on the size of your header and footer */
-    width: 80%; /* Adjust based on your design requirements */
-    max-width: 600px; /* Adjust based on your design requirements */
-    margin: 0 auto; /* Center horizontally */
-    padding: 1em; /* Add some spacing around the container */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    margin-top: 10%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent scrolling within the container */
+  max-height: calc(
+    100vh - 2em
+  ); /* Adjust based on the size of your header and footer */
+  width: 80%; /* Adjust based on your design requirements */
+  max-width: 600px; /* Adjust based on your design requirements */
+  margin: 0 auto; /* Center horizontally */
+  padding: 1em; /* Add some spacing around the container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  margin-top: 20%;
 }
 
 @media (max-width: 1008px) {
-    .todolist-container {
-       margin-top: 20%;
-    }
+  .todolist-container {
+    margin-top: 30%;
+  }
 }
 
 @media (max-width: 708px) {
-    .todolist-container {
-       margin-top: 25%;
-    }
+  .todolist-container {
+    margin-top: 35%;
+  }
 }
 
 @media (max-width: 608px) {
-    .todolist-container {
-       margin-top: 30%;
-    }
+  .todolist-container {
+    margin-top: 40%;
+  }
 }
 
 @media (max-width: 508px) {
-    .todolist-container {
-       margin-top: 40%;
-    }
+  .todolist-container {
+    margin-top: 50%;
+  }
 }
 
 @media (max-width: 408px) {
-    .todolist-container {
-       margin-top: 50%;
-    }
+  .todolist-container {
+    margin-top: 60%;
+  }
 }
 h1 {
-    flex-shrink: 0; /* Keep the title fixed at the top */
+  flex-shrink: 0; /* Keep the title fixed at the top */
 }
 
 .listitem-wrapper {
-    flex-grow: 1; /* Expand to take up remaining space */
-    overflow-y: auto; /* Enable vertical scrolling if content exceeds the container's height */
+  flex-grow: 1; /* Expand to take up remaining space */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds the container's height */
 }
 
 .input-wrapper {
-    flex-shrink: 0; /* Keep the input and button fixed at the bottom */
+  flex-shrink: 0; /* Keep the input and button fixed at the bottom */
 }
 
 /* ... other styles ... */
 
 .input-wrapper {
-    display: flex;
-    align-items: center; /* Align items vertically */
-    gap: 5px; /* Space between input and button */
+  display: flex;
+  align-items: center; /* Align items vertically */
+  gap: 5px; /* Space between input and button */
 }
 
 .input-wrapper input {
-    flex-grow: 1; /* Allow input to grow and fill available space */
-    min-width: 200px; /* Minimum width for the input */
+  flex-grow: 1; /* Allow input to grow and fill available space */
+  min-width: 200px; /* Minimum width for the input */
 }
 
 .input-wrapper button {
-    font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  letter-spacing: 2px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #012d01;
-  cursor: pointer;
-  border: 3px solid;
-  padding: 0.25em 0.5em;
-  
-  position: relative;
-  box-shadow: 1px 1px 0px 0px #012d01, 2px 2px 0px 0px #006400, 3px 3px 0px 0px #006400, 4px 4px 0px 0px #006400, 5px 5px 0px 0px #006400;
-
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: auto;
-}
-
-.input-wrapper button:active{
-    box-shadow: 0px 0px 0px 0px;
-    top: 5px;
-    left: 5px;
-    font-size: 16px;
-}
-
-
-
-.listitem-wrapper ul li {
-    display: flex;
-    align-items: center; /* Align items vertically */
-    gap: 10px; /* Space between list item and buttons */
-    margin: 5px;
-    font-size: 25px;
-}
-
-
-
-.listitem-wrapper ul li button {
-    font-family: "Open Sans", sans-serif;
-    font-size: 28px;
-    letter-spacing: 2px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #012d01;
-    cursor: pointer;
-    border: 3px solid;
-    padding: 0.01em 0.2em;
-    
-    position: relative;
-    box-shadow: 1px 1px 0px 0px #012d01, 2px 2px 0px 0px #006400, 3px 3px 0px 0px #006400, 4px 4px 0px 0px #006400, 5px 5px 0px 0px #006400;
-  
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-}
-
-.listitem-wrapper ul li button:active{
-    box-shadow: 0px 0px 0px 0px;
-    top: 5px;
-    left: 5px;
-}
-
-@media (min-width: 768px) {
-    .button-54 {
-      padding: 0.25em 0.75em;
-    }
-  }
-
-.inputInIt{
-    background-color: transparent; /* Make the background transparent */
-    border: none; /* Remove default border */
-    border-bottom: 1px solid #012d01; 
-    color: #cfd2cf;
-    font-size: 1.1em;
-    width: 80%;
-}
-
-.texting{
-    flex:1;
-}
-
-.digital-clock{
-    display: grid;
-    place-items: center;
-    font-size:2rem;
-	font-family: "Black Ops One", system-ui;
-
-}
-
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-
-    
-}
-
-.display{
-    font-size: 70px;
-    font-family: "Black Ops One", system-ui;
-}
-
-
-.stopwatchButton{
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
@@ -200,7 +93,109 @@ h1 {
   cursor: pointer;
   border: 3px solid;
   padding: 0.25em 0.5em;
-  box-shadow: 1px 1px 0px 0px #012d01, 2px 2px 0px 0px #006400, 3px 3px 0px 0px #006400, 4px 4px 0px 0px #006400, 5px 5px 0px 0px #006400;
+
+  position: relative;
+  box-shadow: 1px 1px 0px 0px #012d01, 2px 2px 0px 0px #006400,
+    3px 3px 0px 0px #006400, 4px 4px 0px 0px #006400, 5px 5px 0px 0px #006400;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+}
+
+.input-wrapper button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+  font-size: 16px;
+}
+
+.listitem-wrapper ul li {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  gap: 10px; /* Space between list item and buttons */
+  margin: 5px;
+  font-size: 25px;
+}
+
+.listitem-wrapper ul li button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #012d01;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.01em 0.2em;
+
+  position: relative;
+  box-shadow: 1px 1px 0px 0px #012d01, 2px 2px 0px 0px #006400,
+    3px 3px 0px 0px #006400, 4px 4px 0px 0px #006400, 5px 5px 0px 0px #006400;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.listitem-wrapper ul li button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+.inputInIt {
+  background-color: transparent; /* Make the background transparent */
+  border: none; /* Remove default border */
+  border-bottom: 1px solid #012d01;
+  color: #cfd2cf;
+  font-size: 1.1em;
+  width: 80%;
+}
+
+.texting {
+  flex: 1;
+}
+
+.digital-clock {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  font-family: "Black Ops One", system-ui;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.display {
+  font-size: 70px;
+  font-family: "Black Ops One", system-ui;
+}
+
+.stopwatchButton {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #012d01;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px #012d01, 2px 2px 0px 0px #006400,
+    3px 3px 0px 0px #006400, 4px 4px 0px 0px #006400, 5px 5px 0px 0px #006400;
   position: relative;
   user-select: none;
   -webkit-user-select: none;
@@ -213,6 +208,3 @@ h1 {
   top: 5px;
   left: 5px;
 }
-
-
-  
